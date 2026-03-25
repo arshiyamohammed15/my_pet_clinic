@@ -13,9 +13,9 @@ jobs:
             - name: check the build
               uses: actions/checkout@v4
             - name: build the code
-              run : mvn compile
+              run: cd pet-clinic && mvn compile
             - name: check the test
-              run : mvn test
+              run: cd pet-clinic && mvn test
             - name: create the package
               run:  mvn package
 
