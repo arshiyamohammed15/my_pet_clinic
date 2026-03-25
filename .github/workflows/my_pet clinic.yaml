@@ -1,7 +1,7 @@
 name: my_pet_clinic
 
 on:
-  push:
+  pull_request:
     branches:
       - main
         
