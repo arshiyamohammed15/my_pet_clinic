@@ -1,9 +1,9 @@
 name: my_pet_clinic
 
 on:
-    pull_request:
-        branches:
-            -main
+  push:
+    branches:
+      - main
         
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: check the build
-              uses: action/checkout@v4
+              uses: actions/checkout@v4
             - name: build the code
               run : mvn compile
             - name: check the test
