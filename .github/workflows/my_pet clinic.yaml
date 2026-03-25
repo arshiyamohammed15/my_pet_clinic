@@ -1,0 +1,21 @@
+name: my_pet_clinic
+
+on:
+    pull_request:
+        branches:
+            -main
+        
+
+jobs:
+    pet_clinic:
+        runs-on: ubuntu-latest
+        steps:
+            - name: check the build
+              uses: action/checkout@v4
+            - name: build the code
+              run : mvn compile
+            - name: check the test
+              run : mvn test
+            - name: create the package
+              run:  mvn package
+
